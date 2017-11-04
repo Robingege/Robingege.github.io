@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="ajax无刷新技术的理解：ajax技术是属于浏览器的技术，由浏览器实例化一个ajax对象，然后帮我们发送一个http请求，并携带一定的参数，当服务器端接收该请求后，对参数进行过滤，做出相应的逻辑判断，然后决定是否需要数据库的参与，做出相应的处理后，对返回的数据进行格式化（一般都处理为json格式的数据）后返回给前端，前端在接收到后端的响应后，然后做出相应的逻辑判断，通过DOM选取页面的局部区域进行">
+<meta name="description" content="ajax无刷新技术的理解：ajax技术是属于浏览器的技术，由浏览器实例化一个ajax对象，然后帮我们发送一个http请求，并携带一定的参数， 当服务器端接收该请求后，对参数进行过滤，做出相应的逻辑判断，然后决定是否需要数据库的参与， 做出相应的处理后，对返回的数据进行格式化（一般都处理为json格式的数据）后返回给前端， 前端在接收到后端的响应后，然后做出相应的逻辑判断，通过DOM选取页面的局部区">
 <meta name="keywords" content="ajax">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ajax 无刷新技术">
 <meta property="og:url" content="http://yoursite.com/2017/10/19/ajax无刷新技术/index.html">
 <meta property="og:site_name" content="Hello World">
-<meta property="og:description" content="ajax无刷新技术的理解：ajax技术是属于浏览器的技术，由浏览器实例化一个ajax对象，然后帮我们发送一个http请求，并携带一定的参数，当服务器端接收该请求后，对参数进行过滤，做出相应的逻辑判断，然后决定是否需要数据库的参与，做出相应的处理后，对返回的数据进行格式化（一般都处理为json格式的数据）后返回给前端，前端在接收到后端的响应后，然后做出相应的逻辑判断，通过DOM选取页面的局部区域进行">
+<meta property="og:description" content="ajax无刷新技术的理解：ajax技术是属于浏览器的技术，由浏览器实例化一个ajax对象，然后帮我们发送一个http请求，并携带一定的参数， 当服务器端接收该请求后，对参数进行过滤，做出相应的逻辑判断，然后决定是否需要数据库的参与， 做出相应的处理后，对返回的数据进行格式化（一般都处理为json格式的数据）后返回给前端， 前端在接收到后端的响应后，然后做出相应的逻辑判断，通过DOM选取页面的局部区">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-19T12:00:30.773Z">
+<meta property="og:updated_time" content="2017-10-19T12:14:03.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ajax 无刷新技术">
-<meta name="twitter:description" content="ajax无刷新技术的理解：ajax技术是属于浏览器的技术，由浏览器实例化一个ajax对象，然后帮我们发送一个http请求，并携带一定的参数，当服务器端接收该请求后，对参数进行过滤，做出相应的逻辑判断，然后决定是否需要数据库的参与，做出相应的处理后，对返回的数据进行格式化（一般都处理为json格式的数据）后返回给前端，前端在接收到后端的响应后，然后做出相应的逻辑判断，通过DOM选取页面的局部区域进行">
+<meta name="twitter:description" content="ajax无刷新技术的理解：ajax技术是属于浏览器的技术，由浏览器实例化一个ajax对象，然后帮我们发送一个http请求，并携带一定的参数， 当服务器端接收该请求后，对参数进行过滤，做出相应的逻辑判断，然后决定是否需要数据库的参与， 做出相应的处理后，对返回的数据进行格式化（一般都处理为json格式的数据）后返回给前端， 前端在接收到后端的响应后，然后做出相应的逻辑判断，通过DOM选取页面的局部区">
 
 
 
@@ -342,8 +342,15 @@
       
 
       
-        <h1 id="ajax无刷新技术的理解："><a href="#ajax无刷新技术的理解：" class="headerlink" title="ajax无刷新技术的理解："></a>ajax无刷新技术的理解：</h1><pre><code>ajax技术是属于浏览器的技术，由浏览器实例化一个ajax对象，然后帮我们发送一个http请求，并携带一定的参数，当服务器端接收该请求后，对参数进行过滤，做出相应的逻辑判断，然后决定是否需要数据库的参与，做出相应的处理后，对返回的数据进行格式化（一般都处理为json格式的数据）后返回给前端，前端在接收到后端的响应后，然后做出相应的逻辑判断，通过DOM选取页面的局部区域进行数据的操作，实现局部的更新，达到页面整体没有刷新（也就是URL地址不变的情况下），局部的区域实现更新。一般用作ajax无刷新分页展示数据，用户名、邮箱的校验等功能。
-</code></pre><h2 id="好处：1-用户的体验比较好；2-节省服务器的宽带（减少服务器的压力）。"><a href="#好处：1-用户的体验比较好；2-节省服务器的宽带（减少服务器的压力）。" class="headerlink" title="好处：1. 用户的体验比较好；2. 节省服务器的宽带（减少服务器的压力）。"></a>好处：1. 用户的体验比较好；2. 节省服务器的宽带（减少服务器的压力）。</h2><h2 id="弊端：1-浏览器无法记住访问的历史信息；2-搜索引擎不利于SEO"><a href="#弊端：1-浏览器无法记住访问的历史信息；2-搜索引擎不利于SEO" class="headerlink" title="弊端：1. 浏览器无法记住访问的历史信息；2. 搜索引擎不利于SEO."></a>弊端：1. 浏览器无法记住访问的历史信息；2. 搜索引擎不利于SEO.</h2>
+        <h1 id="ajax无刷新技术的理解："><a href="#ajax无刷新技术的理解：" class="headerlink" title="ajax无刷新技术的理解："></a>ajax无刷新技术的理解：</h1><pre><code>ajax技术是属于浏览器的技术，由浏览器实例化一个ajax对象，然后帮我们发送一个http请求，并携带一定的参数，
+当服务器端接收该请求后，对参数进行过滤，做出相应的逻辑判断，然后决定是否需要数据库的参与，
+做出相应的处理后，对返回的数据进行格式化（一般都处理为json格式的数据）后返回给前端，
+前端在接收到后端的响应后，然后做出相应的逻辑判断，通过DOM选取页面的局部区域进行数据的操作，实现局部的更新，
+达到页面整体没有刷新（也就是URL地址不变的情况下），局部的区域实现更新。
+一般用作ajax无刷新分页展示数据，用户名、邮箱的校验等功能。
+</code></pre><h2 id="好处："><a href="#好处：" class="headerlink" title="好处："></a>好处：</h2><pre><code>1. 用户的体验比较好；2. 节省服务器的宽带（减少服务器的压力）。
+</code></pre><h2 id="弊端："><a href="#弊端：" class="headerlink" title="弊端："></a>弊端：</h2><pre><code>1. 浏览器无法记住访问的历史信息；2. 搜索引擎不利于SEO.
+</code></pre>
       
     </div>
     
@@ -382,6 +389,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/04/NodeJS/" rel="prev" title="NodeJS 基础">
+                NodeJS 基础 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -462,7 +473,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -484,7 +495,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -519,7 +530,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ajax无刷新技术的理解："><span class="nav-number">1.</span> <span class="nav-text">ajax无刷新技术的理解：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#好处：1-用户的体验比较好；2-节省服务器的宽带（减少服务器的压力）。"><span class="nav-number">1.1.</span> <span class="nav-text">好处：1. 用户的体验比较好；2. 节省服务器的宽带（减少服务器的压力）。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#弊端：1-浏览器无法记住访问的历史信息；2-搜索引擎不利于SEO"><span class="nav-number">1.2.</span> <span class="nav-text">弊端：1. 浏览器无法记住访问的历史信息；2. 搜索引擎不利于SEO.</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ajax无刷新技术的理解："><span class="nav-number">1.</span> <span class="nav-text">ajax无刷新技术的理解：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#好处："><span class="nav-number">1.1.</span> <span class="nav-text">好处：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#弊端："><span class="nav-number">1.2.</span> <span class="nav-text">弊端：</span></a></li></ol></li></ol></div>
             
 
           </div>
